@@ -1,0 +1,340 @@
+  /* Basic CSS Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+    /* Header styles */
+  header {
+    background-color: #10094f;
+    color: #ddd;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .banner {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+
+  /* Body styles */
+  body {
+    background-image: url('symbol.png');
+    background-repeat: repeat;
+    background-size: 60px 60px;
+    background-position: center;
+  }
+
+  /* Content styles */
+  .content {
+    background-image: url('banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 180px;
+    text-align: right;
+    color: #ddd; /* Set text color for better readability */
+    font-family: Arial, Helvetica, sans-serif; /* Set your preferred font stack */
+    background-color: #ffffff;
+}
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .banner {
+      font-size: 20px;
+    }
+  }
+  /* Style for the navigation menu */
+  .menu {
+    list-style: none;
+    width: 300px; /* Adjust width as needed */
+    background-color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #10094f;
+    background-image: url('poster1.png');
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #10094f;
+  }
+
+  .menu li {
+    border-bottom: 1px dotted #10094f;
+    position: relative;
+  }
+
+  .menu li:last-child {
+    border-bottom: 3px;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #10094f;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .menu li a:hover {
+    background-color: #2c589f;
+    color: #ffffff;
+  }
+
+  /* Submenu styles */
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 100%; /* Position the submenu to the right */
+    color:  #10094f;
+    width: 300px; /* Adjust width as needed */
+    margin-top: 0; /* Add spacing between main menu and submenu */
+    border: 3px solid #10094f;
+    list-style: none;
+  }
+
+  .submenu li {
+    position: relative;
+    padding-left: 30px; /* Space for the bullet */
+}
+
+.submenu li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%; /* Adjust to vertically center the icon */
+    transform: translateY(-50%);
+    width: 30px; /* Adjust width and height based on your icon size */
+    height: 25px;
+    background-image: url('symbol.png');
+    background-size: cover; /* Ensures the icon fills the box */
+    background-position: center;
+}
+
+  .menu li:hover .submenu {
+    display: block; /* Show submenu on hover */
+    background-color: #ffffff;
+  }
+
+  /* Submenu1 styles */
+  .submenu1 {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 100%; /* Position the submenu to the right */
+    color:  #10094f;
+    width: 300px; /* Adjust width as needed */
+    margin-top: 0; /* Add spacing between main menu and submenu */
+    border: 3px solid #10094f;
+    list-style: none;
+  }
+
+  .submenu1 li {
+    position: relative;
+    padding-left: 30px; /* Space for the bullet */
+}
+
+.submenu1 li::before {
+    content: '';
+    position: absolute;
+    top: 50%; /* Adjust to vertically center the icon */
+    transform: translateY(-50%);
+    width: 30px; /* Adjust width and height based on your icon size */
+    height: 25px;
+    background-image: url('symbol.png');
+    background-size: cover; /* Ensures the icon fills the box */
+}
+
+  .menu ul li:hover .submenu1 {
+    display: block; /* Show submenu on hover */
+    background-color: #ffffff;
+  }
+
+  ul li:hover > ul {
+    display: block; /* Show nested ul on hover */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    <!--grid-template-columns: repeat(2, 1fr); /* Three equal columns */-->
+    gap: 300px;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+
+.column {
+    padding:5px;
+    background-color: rgba(16, 9, 79, 0.3);
+    border: 5px solid rgba(16, 9, 79, 1);
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Vertically center */
+}
+
+.column img {
+  width: 100%; /* Ensure images don't exceed column width */
+  height: 103px; /* Maintain aspect ratio */
+  display: flexbox; /* Remove any extra space below images */
+  flex-direction:row-reverse;
+  text-align: center; /* Vertically center */
+  justify-content: center;
+  align-items: center; /* Horizontally center */
+}
+
+.column1 {
+  padding:5px;
+  /*background-color: rgba(16, 9, 79, 0.3);*/
+  /*border: 5px solid rgba(16, 9, 79, 1);*/
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Vertically center */
+}
+
+.column1 img {
+  width: 400px; /* Ensure images don't exceed column width */
+  height: 100%; /* Maintain aspect ratio */
+  display: flexbox; /* Remove any extra space below images */
+  flex-direction:row-reverse;
+  text-align: center; /* Vertically center */
+  justify-content: center;
+  align-items: center; /* Horizontally center */
+}
+
+  /* Style for the Scroll Up button */
+.scroll-btn {
+  bottom: 30px;
+  position: fixed;
+  background-color: rgba(16, 9, 79, 1);
+  right: 30px;
+  border: solid;
+  color: white;
+  border-color: black;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 15px;
+  display: none; /* Initially hidden */
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.scroll-btn:hover {
+  background-color: #2c589f;
+  color: white;
+}
+
+  /* Style for image */
+.image {
+  border-radius: 5px;
+  cursor: pointer;
+  height: 50px;
+  color: #ffffff;
+}
+
+.image-container {
+  text-align: center; /* Optional: Centers the images */
+}
+
+.image-container img {
+  display: inline-block;
+  width: 10%; /* Set a fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+/* The Modal (background) */
+.modal {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(16, 9, 79, 0.3); /* Black w/ opacity */
+  display: none;  /*Hidden by default */
+  height: 100%; /* Full height */
+  left: 0;
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 125px; /* Location of the box */
+  position: fixed; /* Stay in place */
+  top: 0;
+  width: 100%; /* Full width */
+  z-index: 1; /* Sit on top */
+  flex-direction: column;
+}
+
+/* Modal Body */
+.modal-body {
+  border: 3px solid #2c589f;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  padding: 17px;
+  text-align: left;
+}
+
+.modal-content {
+  animation-duration: 0.4s;
+  animation-name: animatetop;
+  background-color: #ffffff;
+  border: 2px solid rgba(16, 9, 79, 1);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  padding: 1px;
+  text-align: left;
+  width: 80%;
+}
+
+/* Modal Header */
+.modal-header {
+  background-color: rgba(16, 9, 79, 1);
+  border: 2px solid #2c589f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  padding: 2px 16px;
+  text-align: left;
+}
+
+.modal-footer {
+  background-color: rgba(16, 9, 79, 1);
+  border: 2px solid #2c589f;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  padding: 2px 16px;
+  text-align: left;
+}
+
+/* Close button */
+.close {
+  color: white);
+  cursor: pointer;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  margin: auto;
+}
+.close:hover,
+  .close:focus {
+    color: #2c589f;
+    cursor: pointer;
+    text-decoration: none;
+  }
+/* Vertically stacked buttons */
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.modal-buttons button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
